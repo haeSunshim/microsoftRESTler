@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: msrestler
+  name: msrestler
+  namespace: default
+spec:
+  ports:
+  - port: 90
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: msrestler
+  type: NodePort

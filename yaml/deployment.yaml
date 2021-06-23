@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: msrestler
+  labels:
+    app: msrestler
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: msrestler
+  template:
+    metadata:
+      labels:
+        app: msrestler
+    spec:
+      containers:
+      - image: mcr.microsoft.com/restapifuzztesting/restler-fuzzer
+        name: msrestler
