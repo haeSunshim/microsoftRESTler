@@ -15,5 +15,5 @@ spec:
         app: msrestler
     spec:
       containers:
-      - image: mcr.microsoft.com/restapifuzztesting/restler-fuzzer:v7.4.0
+      - image: mysql
         name: msrestler
